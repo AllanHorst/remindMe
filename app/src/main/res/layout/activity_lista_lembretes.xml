@@ -24,10 +24,9 @@
         android:text="Adicionar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/list_lembretes"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
         android:id="@+id/btn_adicionar"
-        android:onClick="adicionar" />
+        android:onClick="adicionar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
