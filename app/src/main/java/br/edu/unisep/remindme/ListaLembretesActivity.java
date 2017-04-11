@@ -2,12 +2,14 @@ package br.edu.unisep.remindme;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import br.edu.unisep.remindme.adapter.LembretesAdapter;
 import br.edu.unisep.remindme.dao.LembreteDAO;
@@ -29,8 +31,9 @@ public class ListaLembretesActivity extends AppCompatActivity implements Adapter
         Cursor crs = dao.listar();
 
         this.adapter = new LembretesAdapter(this, crs);
-
         this.listaLembretes.setAdapter(this.adapter);
+
+        this.setFonts();
     }
 
     public void adicionar(View v) {
@@ -53,5 +56,12 @@ public class ListaLembretesActivity extends AppCompatActivity implements Adapter
         Intent i = new Intent(this, CadastroLembreteActivity.class);
         i.putExtra("ID_LEMBRETE", id);
         startActivityForResult(i, 1);
+    }
+
+    public void setFonts(){
+        Typeface black = Typeface.createFromAsset(getAssets(), "fonts/Montserrat-Black.otf");
+
+        TextView lblForget = (TextView) findViewById(R.id.lblForget);
+        lblForget.setTypeface(black);
     }
 }

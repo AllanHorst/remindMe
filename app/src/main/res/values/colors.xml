@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="textColor">#fff</color>
+
+    <color name="bigText">#9dffffff</color>
 </resources>
