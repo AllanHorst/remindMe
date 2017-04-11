@@ -11,15 +11,6 @@
     android:background="@drawable/bg_gradient"
     tools:context="br.edu.unisep.remindme.ListaLembretesActivity">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/list_lembretes"
-        style="@style/Widget.AppCompat.ListView"
-        android:layout_marginTop="114dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Adicionar"
         android:layout_width="match_parent"
@@ -28,5 +19,25 @@
         android:onClick="adicionar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/list_lembretes"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/dont_forget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp"
+        android:id="@+id/textView2"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:textIsSelectable="false" />
 
 </RelativeLayout>
