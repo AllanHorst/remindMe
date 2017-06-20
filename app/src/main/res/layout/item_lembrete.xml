@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:layout_width="229dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="19dp"
-        android:id="@+id/lbl_descricao"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+        android:background="@android:color/transparent"
+        android:layout_height="219dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:background="@android:color/background_light"
+            android:translationZ="10dp">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/lbl_descricao"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textSize="42sp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <ImageButton
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:srcCompat="@drawable/right_icon"
+            android:id="@+id/imageButton"
+            android:background="@drawable/circle"
+            android:layout_gravity="bottom|center"
+            android:translationZ="20dp"
+            android:layout_marginBottom="40dp" />
+
+    </FrameLayout>
+
 </RelativeLayout>

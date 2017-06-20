@@ -15,11 +15,12 @@
     <ListView
         android:layout_width="match_parent"
         android:id="@+id/list_lembretes"
-        style="@style/Widget.AppCompat.ListView"
-        android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:layout_below="@+id/lblForget"
-        android:layout_alignParentStart="true" />
+        android:divider="@android:color/transparent"
+        android:dividerHeight="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_height="220dp" />
 
     <TextView
         android:text="@string/dont_forget"
