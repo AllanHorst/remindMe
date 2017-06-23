@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_cadastro_lembrete"
     android:layout_width="match_parent"
@@ -8,35 +9,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg_gradient"
     tools:context="br.edu.unisep.remindme.CadastroLembreteActivity">
-
-    <TextView
-        android:text="@string/descricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/lblDescricao"
         android:layout_alignParentStart="true"
-        android:id="@+id/txt_descricao"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt_descricao" />
 
-    <Button
-        android:text="@string/salvar"
-        android:layout_width="match_parent"
+    <TextView
+        android:text="@string/descricao"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_descricao"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginTop="48dp"
-        android:id="@+id/button"
-        android:layout_alignParentStart="true"
+        android:id="@+id/lblDescricao"
+        android:layout_marginTop="26dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/new_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageButton2"
+        android:background="?attr/colorPrimary"
+        android:scaleType="fitXY"
         android:onClick="salvar" />
+
 </RelativeLayout>
